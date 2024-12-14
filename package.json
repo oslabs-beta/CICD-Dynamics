@@ -12,7 +12,8 @@
     "build": "webpack",
     "lint:style": "stylelint '**/*.{css,scss}'",
     "lint:js": "eslint '**/*.{js,ts}'",
-    "lint": "npm run lint:style && npm run lint:js"
+    "lint": "npm run lint:style && npm run lint:js",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
