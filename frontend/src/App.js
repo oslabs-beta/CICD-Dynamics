@@ -6,6 +6,7 @@ import './stylesheet.css';
 
 function App() {
   return (
+    // this is a linting test
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
