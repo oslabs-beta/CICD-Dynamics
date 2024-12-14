@@ -47,15 +47,5 @@ Contributions are essential in the open-source community. If you would like to c
 2.   Create a feature branch for your additions
 3.   Submit a pull request that details your changes.
 4.   We'll review your feature(s) and get back to you.
-
-
-
-
-
-
-
-
-
-
 -- Feedback: talk about graphs information collected to explain what they mean and how they’re calculated.
 
