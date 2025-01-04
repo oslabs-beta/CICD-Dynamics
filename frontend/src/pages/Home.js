@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashLink as NavLink } from 'react-router-hash-link'; // Import HashLink
 
 // Components
-import Footer from './Footer';
+import Footer from './Footer.js';
 
 // Assets
 import logo from '/frontend/assets/CICDash_logo_h.png';

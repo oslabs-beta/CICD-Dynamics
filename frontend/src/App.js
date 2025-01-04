@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Mvpmetrics from './pages/Mvpmetrics';
+import Home from './pages/Home.js';
+import Mvpmetrics from './pages/Mvpmetrics.js';
 import './stylesheet.css';
 
 function App() {

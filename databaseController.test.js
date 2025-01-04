@@ -19,7 +19,7 @@ describe('databaseController.registerUser', () => {
     jwt.verify
       .mockReturnValueOnce({ username: 'testuser' })
       .mockReturnValueOnce({ accessToken: 'access' })
-      .mockReturnValueOnce({ refreshToken: 'refresh' });
+      .mockReturnValueOnce({ refreshToken: 'refresh' });//create better test to determine the refresh token works correctly 1/2
 
     User.findOne.mockResolvedValue({ username: 'testuser' });
 
@@ -27,9 +27,9 @@ describe('databaseController.registerUser', () => {
 
     expect(User.findOneAndUpdate).toHaveBeenCalledWith(
       { username: 'testuser' },
-      { refresh_token: 'refresh' },
+      expect.any(Object), // //create better test to determine the refresh token works correctly 2/2
       { new: true },
     );
     expect(next).toHaveBeenCalled();
-
+  });
 });

@@ -1,14 +1,15 @@
 // Modules
-const path = require('path');
-const dotenv = require('dotenv');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // generate an HTML file and inject the necessary script tags automatically
+import path from 'path';
+import dotenv from 'dotenv';
+import HtmlWebpackPlugin from 'html-webpack-plugin';// generate an HTML file and inject the necessary script tags automatically
+
 dotenv.config();
 
-module.exports = {
-  entry: path.join(__dirname, './frontend/src/', 'index.js'),
+export default {
+  entry: path.join(path.resolve(), './frontend/src/', 'index.js'),
   output: {
     filename: 'bundle.js', // NOTE Specified name 'bundle.js' for when webpack builds app and generates a bundle containing all modules and dependencies
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(path.resolve(), 'build'),
   },
   mode: process.env.MODE,
   module: {
@@ -44,12 +45,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'CICDash',
-      template: path.join(__dirname, './frontend/public', 'index.html'),
+      template: path.join(path.resolve(), './frontend/public', 'index.html'),
     }),
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, '/build'),
+      directory: path.join(path.resolve(), '/build'),
       publicPath: '/',
     },
     hot: true, // enables Hot Module Replacement
@@ -65,7 +66,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   performance: {
     hints: false, // webpack won't emit warnings based on these size limits during the build

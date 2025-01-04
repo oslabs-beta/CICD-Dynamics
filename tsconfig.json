@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Target modern JavaScript (adjust to ES2020 if needed)
+    "module": "ESNext", // Use ES modules for Webpack compatibility
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Support import/export interop with CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
+    "skipLibCheck": true, // Skip type checking for node_modules
+    "moduleResolution": "Node", // Resolve modules like Node.js
+    "jsx": "react-jsx", // Enable React JSX (adjust if using React 17+)
+    "allowJs": true, // Allow JavaScript files (gradual migration to TypeScript)
+    "checkJs": false, // Disable type checking for JavaScript files
+    "outDir": "./build", // Output directory for compiled files
+    "baseUrl": ".", // Base directory for module resolution
+    "paths": {
+      "*": ["node_modules/*"] // Resolve modules from node_modules
+    },
+    "sourceMap": true // Generate source maps for debugging
+  },
+  "include": [
+    "./frontend/src/**/*", // Include your frontend TypeScript files
+    "./backend/**/*" // Include backend files (optional)
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules
+    "build" // Exclude build directory
+  ]
+}
